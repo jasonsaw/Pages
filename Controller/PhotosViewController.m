@@ -121,7 +121,7 @@
 {
     PhotoCell *photoCell = (PhotoCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"photoCell" forIndexPath:indexPath];
     photoCell.delegate = self;
-//    [photoCell sizeToFit];
+
     UIImageView *imagev = [[UIImageView alloc] initWithImage:[_photosThumbNailArray objectAtIndex:indexPath.row]];
     imagev.frame = photoCell.bounds;
     [photoCell.contentView addSubview:imagev];
