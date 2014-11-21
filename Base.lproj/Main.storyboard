@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="JFu-wT-5wM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Photos View View Controller-->
+        <scene sceneID="MZ5-SA-5HO">
+            <objects>
+                <navigationController storyboardIdentifier="photosViewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uPl-38-OtV" customClass="PhotosViewViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MyA-S9-qIm"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="had-tk-9cm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wno-EZ-rpk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1684" y="-713"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="fgG-zd-nJq">
+            <objects>
+                <tableViewController id="e5F-MM-ADg" customClass="RootViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Udv-c5-zBC"/>
+                    <connections>
+                        <segue destination="uPl-38-OtV" kind="push" id="0rm-kO-xOh"/>
+                        <segue destination="uPl-38-OtV" kind="modal" id="nsH-a2-J88"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V34-vt-S9W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1948" y="-713"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BSe-fc-jOG">
+            <objects>
+                <navigationController id="JFu-wT-5wM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SWT-WW-P3F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="e5F-MM-ADg" kind="relationship" relationship="rootViewController" id="eEY-gu-bnU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qb7-An-8nR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2167" y="-713"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="nsH-a2-J88"/>
+    </inferredMetricsTieBreakers>
+</document>
